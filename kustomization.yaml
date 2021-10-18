@@ -2,3 +2,5 @@ resources:
     - namespace-1
     - namespace-2
     - namespace-3
+    - namespace-2/namespace-2.yaml
+    - namespace-3/namespace-3.yaml

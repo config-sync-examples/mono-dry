@@ -1,7 +1,6 @@
 commonAnnotations:
     foo: bar
 resources:
-    - namespace-2.yaml
     - overlay-1
     - overlay-2
     - overlay-3
