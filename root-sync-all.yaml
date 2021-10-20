@@ -1,0 +1,19 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: root-sync
+  namespace: config-management-system
+spec:
+  git:
+    auth: none
+    branch: main
+    dir: /
+    repo: https://github.com/config-sync-examples/mono-dry.git
+    revision: HEAD
+  override:
+    resources:
+    - containerName: reconciler
+      memoryLimit: 1Gi
+    - containerName: hydration-controller
+      cpuLimit: 1800m
+  sourceFormat: unstructured
